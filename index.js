@@ -14,7 +14,6 @@ app.use(bodyParser.urlencoded({ extended: false }));
 // json头  json/plain;charset=utf-8
 app.use(bodyParser.json());
 
-
 app.use('/api/user', user);
 app.use('/api', categories);
 app.use('/api', articles);
