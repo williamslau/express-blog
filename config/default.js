@@ -6,6 +6,6 @@ const config = {
         POST: '3306',
         HOST: 'localhost',
     }
-}
+};
 
 module.exports = config;

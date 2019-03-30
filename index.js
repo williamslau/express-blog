@@ -2,7 +2,8 @@ const express = require('express');
 const mysql = require('mysql');
 const app = express();
 const user = require('./routers/user');
-const categories = require('./routers/categories');
+const labels = require('./routers/labels');
+const classify = require('./routers/classify');
 const articles = require('./routers/articles');
 
 let bodyParser = require('body-parser');
@@ -15,7 +16,8 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 app.use('/api/user', user);
-app.use('/api', categories);
+app.use('/api', labels);
+app.use('/api', classify);
 app.use('/api', articles);
 
 
