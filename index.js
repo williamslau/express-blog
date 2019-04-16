@@ -7,8 +7,8 @@ const classify = require('./routers/classify');
 const articles = require('./routers/articles');
 
 let bodyParser = require('body-parser');
-app.listen(8080, function () {
-    console.log('server started at 8080');
+app.listen(8888, function () {
+    console.log('server started at 8888');
 });
 // 表单头   application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: false }));

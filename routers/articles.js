@@ -4,9 +4,11 @@ const router = express.Router();
 
 // 文章列表
 router.get('/articleList', (req, res) => {        // 获取文章列表
-    mysql.findArticleList().then(data => {
+    let { cid } = req.query;
+    mysql.findArticleList(cid).then(data => {
         res.send(data);
     }).catch(err => {
+        console.log(err);
         res.send('获取失败');
     });
 });
